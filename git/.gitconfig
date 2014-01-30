@@ -1,6 +1,6 @@
 [user]
-        name = Yuta Kato
-        email = yyttkktt@gmail.com
+        name = penxera
+        email = kool.arakaze@gmail.com
 [color]
         ui = auto
 [alias]
@@ -10,8 +10,8 @@
   br = branch
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 [core]
-        excludesfile = /Users/yuta/.gitignore
-        editor = emacs
+        excludesfile = /Users/penxera/.gitignore
+        editor = vim
 [difftool "sourcetree"]
         cmd = opendiff \"$LOCAL\" \"$REMOTE\"
         path =
