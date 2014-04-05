@@ -56,3 +56,4 @@ if [[ -f ~/.nodebrew/nodebrew ]]; then
     nodebrew use v0.10.22
 fi
 
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
