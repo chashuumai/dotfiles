@@ -40,20 +40,24 @@ ZSH_THEME="custom"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew screen autojump sublime vi-mode Completion zsh-syntax-highlighting)
+plugins=(git brew screen autojump vi-mode Completion zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export RBENV_ROOT=/usr/local/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-source $HOME/.env
+#export RBENV_ROOT=/usr/local/var/rbenv
+#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source $HOME/.zshenv
+
+#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 if [[ -f ~/.nodebrew/nodebrew ]]; then
     export PATH=$HOME/.nodebrew/current/bin:$PATH
-    nodebrew use v0.10.22
+    nodebrew use v0.10.28
 fi
 
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+
+
+#eval "$(gulp --completion=zsh)"

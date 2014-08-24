@@ -1,6 +1,5 @@
 ### /Users/yuta/.gitignore-boilerplates/Global/Emacs.gitignore
 
-*~
 \#*\#
 /.emacs.desktop
 /.emacs.desktop.lock
@@ -13,4 +12,11 @@ tramp
 .org-id-locations
 *_archive
 
-
+# custom
+.DS_Store
+*~
+*.swp
+._*
+node_modules
+release
+.sass-cache
