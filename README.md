@@ -1,4 +1,12 @@
-cd $HOME
-# git clone
-sh -x ./dotfiles/init.sh
+# dotfiles
+
+## how to
+
+```
+$ git clone dotfiles
+
+$ sh -x ./dotfiles/init.sh
+
+```
+
 
