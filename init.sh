@@ -4,8 +4,8 @@
 #    ln -s $HOME/dotfiles/$file $HOME/$file
 #done
 
-ln -sf $HOME/dotfiles/git/.gitignore $HOME/
-ln -sf $HOME/dotfiles/git/.gitconfig $HOME/
+ln -sf $HOME/dotfiles/.gitignore $HOME/
+ln -sf $HOME/dotfiles/.gitconfig $HOME/
 ln -sf $HOME/dotfiles/.zshrc $HOME/
 ln -sf $HOME/dotfiles/.vim $HOME/
 ln -sf $HOME/dotfiles/.vimrc $HOME/
