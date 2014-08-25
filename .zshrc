@@ -59,5 +59,8 @@ fi
 
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
+if [ -d $HOME/.npm/node_modules/bin ]; then
+      export PATH=$PATH:$HOME/.npm/node_modules/bin
+fi
 
 #eval "$(gulp --completion=zsh)"

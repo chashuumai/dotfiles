@@ -78,3 +78,48 @@ inoremap () ()<Left>
 inoremap "" ""<Left>
 inoremap '' ''<Left>
 inoremap <> <><Left>
+
+"---------------------------
+" Start Neobundle Settings.
+"---------------------------
+" NeoBundle
+" http://qiita.com/muran001/items/3080c4816b7c2e65e40b
+set nocompatible
+filetype plugin indent off
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+  call neobundle#rc(expand('~/.vim/bundle'))
+endif
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'tyru/caw.vim.git'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'grep.vim'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'drillbits/nyan-modoki.vim'
+
+filetype plugin indent on
+
+NeoBundleCheck
+
+"-------------------------
+" End Neobundle Settings.
+"-------------------------
+
+" commentout
+nmap <Leader>c <Plug>(caw:i:toggle)
+vmap <Leader>c <Plug>(caw:i:toggle)
+
+" nyan
+set laststatus=2
+set statusline=%F%m%r%h%w[%{&ff}]%=%{g:NyanModoki()}(%l,%c)[%P]
+let g:nyan_modoki_select_cat_face_number = 2
+let g:nayn_modoki_animation_enabled= 1
+
+" nerdtree
+let NERDTreeShowHidden = 1
+autocmd VimEnter * execute 'NERDTree'

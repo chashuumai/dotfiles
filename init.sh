@@ -7,3 +7,7 @@
 ln -sf $HOME/dotfiles/git/.gitignore $HOME/
 ln -sf $HOME/dotfiles/git/.gitconfig $HOME/
 ln -sf $HOME/dotfiles/.zshrc $HOME/
+ln -sf $HOME/dotfiles/.vim $HOME/
+ln -sf $HOME/dotfiles/.vimrc $HOME/
+ln -sf $HOME/dotfiles/.npmrc $HOME/
+ln -sf $HOME/dotfiles/.screenrc $HOME/
