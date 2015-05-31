@@ -24,10 +24,25 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 
+NeoBundle 'Shougo/vimproc', {
+  \ 'build' : {
+    \ 'windows' : 'make -f make_mingw32.mak',
+    \ 'cygwin' : 'make -f make_cygwin.mak',
+    \ 'mac' : 'make -f make_mac.mak',
+    \ 'unix' : 'make -f make_unix.mak',
+  \ },
+\ }
+
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'LeafCage/yankround.vim'
+NeoBundle 'Shougo/vimfiler'
+"NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'junegunn/vim-easy-align'
+NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'mattn/emmet-vim'
 "NeoBundle 'thinca/vim-quickrun'
 "NeoBundle 'grep.vim'
@@ -38,6 +53,7 @@ NeoBundle 'tyru/caw.vim.git'
 "NeoBundle 'kana/vim-textobj-indent'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/AnsiEsc.vim'
+NeoBundle 'jiangmiao/simple-javascript-indenter'
 
 call neobundle#end()
 
@@ -63,7 +79,7 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set autoindent
-set smartindent
+"set smartindent
 set smarttab
 set expandtab
 
@@ -189,7 +205,6 @@ nnoremap tl  :<C-u>tags<CR>  履歴一覧
 " :helpを3倍の速度で引く
 nnoremap <C-h>  :<C-u>help<Space>
 
-
 " ----------------------------------------------------
 " caw
 " commentout
@@ -200,8 +215,8 @@ vmap <Leader>c <Plug>(caw:i:toggle)
 " ----------------------------------------------------
 " nerdtree
 " ----------------------------------------------------
-let NERDTreeShowHidden = 1
-autocmd VimEnter * execute 'NERDTree'
+"let NERDTreeShowHidden = 1
+"autocmd VimEnter * execute 'NERDTree'
 
 " ----------------------------------------------------
 " NeoBundle 'scrooloose/syntastic'
@@ -240,3 +255,4 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vspli
 " ESCキーを2回押すと終了する
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
+
