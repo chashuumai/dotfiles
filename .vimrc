@@ -108,7 +108,8 @@ set title
 set showcmd
 set laststatus=2
 set mouse=a
-set clipboard=unnamed
+set clipboard=unnamed,autoselect
+
 
 " buffertime continue undo
 set hidden
